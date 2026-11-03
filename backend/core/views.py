@@ -4,12 +4,12 @@ from core.serializers import TaskSerializer, ProjectSerializer
 from core.models import Task, Project
 
 
-class ProjectListCreateView(generics.ListAPIView):
+class ProjectView(generics.ListAPIView):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
 
-class TaskListCreateView(generics.ListAPIView):
+class TaskView(generics.ListAPIView):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
